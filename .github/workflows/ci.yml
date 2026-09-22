@@ -27,6 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run automated tests
+        working-directory: apps/demo-app
+        run: |
+          pytest -v
+
       - name: Validate application
         working-directory: apps/demo-app
         run: |
